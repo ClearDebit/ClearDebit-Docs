@@ -7,8 +7,6 @@ export default defineUserConfig({
 
   title: 'Documentation',
   description: 'ClearDebit',
-  
-  base: "/ClearDebit-Docs/",
 
   theme: defaultTheme({
     logo: 'https://irp.cdn-website.com/2b60cfa3/dms3rep/multi/ClearDebit+Logo+Light.svg',
