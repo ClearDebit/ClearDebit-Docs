@@ -11,16 +11,15 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: 'https://irp.cdn-website.com/2b60cfa3/dms3rep/multi/ClearDebit+Logo+Light.svg',
 
-    navbar: ['/', '/mosaic-submit/README.md', '/mosaic-managed/README.md', '/filemaker/README.md', '/cdd-bureau/README.md'],
+    navbar: ['/', /*'/mosaic-submit/README.md',*/ '/mosaic-managed/README.md', /*'/filemaker/README.md',*/ '/cdd-bureau/README.md'],
 	
 	sidebar: {
 	
-		'/mosaic-submit/': [
+		/*'/mosaic-submit/': [
 			{
-				collapsible: true,
 				text: 'Mosaic Submit'
 			},
-		],
+		],*/
 		
 		'/mosaic-managed/': [
 			{
@@ -45,11 +44,11 @@ export default defineUserConfig({
 			},
 		],
 		
-		'/filemaker/': [
+		/*'/filemaker/': [
 			{
 				text: 'Mosaic Filemaker'
 			},
-		],
+		],*/
 		
 		'/cdd-bureau/': [
 			{
