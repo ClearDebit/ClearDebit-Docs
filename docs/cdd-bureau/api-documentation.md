@@ -9,11 +9,9 @@ The API is hosted at https://api.cleardirectdebit.co.uk/gateway.php
 
 All Requests to the API should be sent using https encryption. Un-encrypted (http based) requests will be rejected. 
 
-Requests to the API should be sent using POST requests, formatted as a JSON* hash (see below). 
+Requests to the API should be sent using POST requests, formatted as [JSON](https://tools.ietf.org/html/rfc7159). 
 
-* JSON reference; https://tools.ietf.org/html/rfc7159
-
-For all requests, the HTTP header field : content-type, should be set to application/json
+For all requests, the HTTP header field: `Content-Type`, should be set to `application/json`.
 
 ## Request Structure
 
@@ -56,15 +54,15 @@ If the action is `upload` then : (also, refer to Example E01 below)
 - There should be one record for each file that is being transferred. 
 - Each record must in itself be a JSON hash, and should specify filename and data: 
 ```
-"name":"<filename>"
-"data":"<filedata>"
+"name": "<filename>",
+"data": "<filedata>"
 ```
 
 - Filenames must consist only the following characters:
-    - Alphabetic ( a-z A-Z )
-    - Numbers ( 0-9 )
+    - Alphabetic ( `a-z` `A-Z` )
+    - Numbers ( `0-9` )
     - Spaces are allowed
-    - Dots, Dashes, Brackets () and [], and Underscores
+    - Dots `.`, Dashes `-`, Brackets `()` and `[]`, and underscores `_`
 - File data must be converted and supplied as base64 data eg:
 
 ```php
