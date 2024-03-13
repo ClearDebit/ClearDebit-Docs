@@ -54,7 +54,8 @@ export default defineUserConfig({
 			{
 				text: 'ClearDebit Bureau',
 				children: [
-					'/cdd-bureau/api-documentation.md'
+					'/cdd-bureau/api-documentation.md',
+					'/cdd-bureau/sftp-documentation.md'
 				]
 			},
 		],
