@@ -10,7 +10,9 @@ The Bacs Transmission Cycle is the sequence of days required to complete a Bacs 
 
  * Day 1: Input day: payment files are submitted to Bacs
  * Day 2: Processing day: Bacs forward the payment instructions to the specified banks and building societies for processing  
- * Day 3: Entry day: payment instructions are applied by the banks and building societies 
+ * Day 3: Entry day: payment instructions are applied by the banks and building societies
+ 
+ ![](/docs/assets/mosaic-submit-bacs-days.png)
 
 ## Bacs Service Opening Times 
 
