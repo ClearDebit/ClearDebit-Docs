@@ -12,7 +12,7 @@ The response codes are structured according to the main validation activities co
 
 ### BACSTEL-IP Logon & Submission XML Header Response Codes
 
-Application Response Code	Description
+#### Application Response Codes
 
 
 | Response Code | Outcome | Details | Required Action |
@@ -20,118 +20,31 @@ Application Response Code	Description
 | 1001 | Your submission has been rejected. | The last request/slice that BACS received was not the one expected. | Please contact your solution supplier. |
 | 1002 | Your payment file has been rejected. | There is no valid relationship between the bureau submitting the payment file and the payment originator. | Please contact your sponsor to discuss your profile for BACS Payment Services. |
 | 1004 | Your submission has been rejected. | You have attempted to transmit a submission with the same "submission serial number" as another submission for the same service user number and processing day that has already been accepted by BACS. | Please ensure you have not already transmitted this submission to BACS on the current processing day. If you have not, please amend the submission serial number in the VOL1 and retransmit the submission. If you require assistance, please contact your solution supplier. |
-
-#### Response Code: 1005
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	The security checks at BACS have identified that the “signature hash” for the submission is invalid.  
-**Required action:** 	 	Please re-validate and then re-sign the submission and retransmit from the start submission request. If this problem persists please contact your solution supplier. 
-
-#### Response Code: 1009
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	Your software has transmitted a slice of an incorrect size.  
-**Required action:** 	 	Please contact your solution supplier. 
-
-#### Response Code: 1011
-**Outcome:** 	Your submission has been rejected.  
-**Details:** 	 	BACS has received a different number of slices to the number expected based on information provided by your software (in the XML submission header).  
-**Required action:** 	 	Please contact your solution supplier. 
-
-#### Response Code: 1012
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	Your session with BACS Payment Services has timed out.  
-**Required action:** 	 	If you wish to continue using BACS Payment Services please re-authenticate and restart the submission. 
-
-#### Response Code: 1013
-**Outcome:** Your submission has been aborted.  
-**Details:** 	 	Your submission has been aborted at your request.  
-**Required action:** 	 	No action required. 
-
-#### Response Code: 1014
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	A BACS operator has terminated your submission.  
-**Required action:** 	 	Please contact BACS. 
-
-#### Response Code: 1015
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	This submission was not completed before another one was started.  
-**Required action:** 	 	No action required. 
-
-#### Response Code: 1016
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	A technical error has occurred at BACS.  
-**Required action:** 	 	Please try retransmitting the submission. If the problem persists, please contact BACS.
-
-#### Response Code: 1021
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	You have submitted a multi-file submission, however, as you are not a bureau service user this is not permitted.  
-**Required action:** 	 	The payment files should be sent in separate submissions. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-#### Response Code: 1023
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	You are submitting on behalf of a service user you are not linked to.  
-**Required action:** 	 	Please ensure the submission is sent by a contact associated with the service user. If the problem persists, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-#### Response Code: 1024
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	You do not have the correct permissions to submit files.  
-**Required action:** 	 	Please ensure the submission is sent by a contact who has the correct permissions. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-#### Response Code: 1025
-**Outcome:** Your submission has been rejected.  
-**Details:** 	 	The submission has been signed by a contact who is not recognised by BACS.  
-**Required action:** 	 	Please ensure the submission is signed by a recognised contact. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-1026	  	  	Your submission has been rejected.  
-Details: 	 	The submission has been signed by a contact who is not associated with the service user.  
-Required action: 	 	Please ensure the submission is signed by an associated contact. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-1027	  	  	Your submission has been rejected.  
-Details: 	 	The signature on your submission cannot be read.  
-Required action: 	 	Please re-sign the submission and retransmit. If this problem persists, please contact your solution supplier. 
-
-1028	  	  	Your submission has been rejected.  
-Details: 	 	The submission has been signed by a contact that is not active on BACSTEL-IP  
-Required action: 	 	Please ensure the submission is signed by an active contact. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-1029	  	  	Your submission has been rejected.  
-Details: 	 	The submission has been signed by a contact that does not have signing privileges.  
-Required action: 	 	Please ensure the submission is signed by a contact that has signing privileges. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services 
-
-1031	  	  	Your submission has been rejected.  
-Details: 	 	BACS does not recognise your submitting software.  
-Required action: 	 	Please contact your solution supplier to ensure the package has been registered and approved by BACS. 
-
-1032	  	  	Your submission has been rejected.  
-Details: 	 	Your submitting software has not been approved by BACS.  
-Required action: 	 	Please contact your solution supplier to ensure the package has been approved by BACS.
-
-1033	  	  	Your submission has been rejected.  
-Details: 	 	Your submitting software is not linked to the submitting service user.  
-Required action: 	 	Please contact your sponsor to ensure the software has been properly associated with the service user or use a package that has been. 
-
-1034	  	  	Your logon has been rejected.  
-Details: 	 	The submitting software has not supplied a software package identifier in the logon request.  
-Required action: 	 	Please contact your solution supplier. 
-
-1035	  	  	Your submission has been rejected.  
-Details: 	 	The solution supplier associated with the submitting software is not linked to the service user you are submitting with, where the service user is designated as a Supplier Tester service user.  
-Required action: 	 	Please contact your sponsor. 
-
-1039	  	  	Your submission has been rejected.  
-Details: 	 	The submitting service user is not allowed to submit live submissions using this package.  
-Required action: 	 	Please contact your sponsor. 
-
-1040	  	  	Your submission has been rejected.  
-Details: 	 	The submitting service user is designated as a Supplier Tester service user, and as such cannot submit live submissions.  
-Required action: 	 	Please submit using a normal service user. 
-
-1050	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (The transmitted data does not consist of a complete submission.)  
-Required action: 	 	Please try retransmitting your Submission. Please contact your solution supplier. 
-
-1911	  	  	Your submission has been rejected.  
-Details: 	 	You have submitted a payment file that exceeds the allowed number of payment instructions (1.2 million).  
-Required action: 	 	Please resubmit the payment instructions in smaller payment files. 
+| 1005 | Your submission has been rejected. | The security checks at BACS have identified that the “signature hash” for the submission is invalid.  | Please re-validate and then re-sign the submission and retransmit from the start submission request. If this problem persists please contact your solution supplier. |
+| 1009 | Your submission has been rejected. | Your software has transmitted a slice of an incorrect size.  | Please contact your solution supplier. |
+| 1011 | Your submission has been rejected. | BACS has received a different number of slices to the number expected based on information provided by your software (in the XML submission header). | Please contact your solution supplier. |
+| 1012 | Your submission has been rejected. | Your session with BACS Payment Services has timed out.  | If you wish to continue using BACS Payment Services please re-authenticate and restart the submission. |
+| 1013 | Your submission has been aborted. | Your submission has been aborted at your request. | No action required. |
+| 1014 | Your submission has been rejected. | A BACS operator has terminated your submission. | Please contact BACS. |
+| 1015 | Your submission has been rejected. | This submission was not completed before another one was started. | No action required. |
+| 1016 | Your submission has been rejected. | A technical error has occurred at BACS.  | Please try retransmitting the submission. If the problem persists, please contact BACS. |
+| 1021 | Your submission has been rejected. | You have submitted a multi-file submission, however, as you are not a bureau service user this is not permitted.  | The payment files should be sent in separate submissions. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. |
+| 1023 | Your submission has been rejected. | You are submitting on behalf of a service user you are not linked to. | Please ensure the submission is sent by a contact associated with the service user. If the problem persists, please contact your sponsor to discuss your profile for BACS Payment Services. |
+| 1024 | Your submission has been rejected. | You do not have the correct permissions to submit files.  | Please ensure the submission is sent by a contact who has the correct permissions. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. |
+| 1025 | Your submission has been rejected. | The submission has been signed by a contact who is not recognised by BACS.  | Please ensure the submission is signed by a recognised contact. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. |
+| 1026 | Your submission has been rejected. | The submission has been signed by a contact who is not associated with the service user. | Please ensure the submission is signed by an associated contact. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. |
+| 1027 | Your submission has been rejected. | The signature on your submission cannot be read. | Please re-sign the submission and retransmit. If this problem persists, please contact your solution supplier. |
+| 1028 | Your submission has been rejected. | The submission has been signed by a contact that is not active on BACSTEL-IP | Please ensure the submission is signed by an active contact. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services. |
+| 1029 | Your submission has been rejected. | The submission has been signed by a contact that does not have signing privileges. | Please ensure the submission is signed by a contact that has signing privileges. If you have any concerns, please contact your sponsor to discuss your profile for BACS Payment Services |
+| 1031 | Your submission has been rejected. | BACS does not recognise your submitting software. | Please contact your solution supplier to ensure the package has been registered and approved by BACS. |
+| 1032 | Your submission has been rejected. | Your submitting software has not been approved by BACS. | Please contact your solution supplier to ensure the package has been approved by BACS. |
+| 1033 | Your submission has been rejected. | Your submitting software is not linked to the submitting service user. | Please contact your sponsor to ensure the software has been properly associated with the service user or use a package that has been. |
+| 1034 | Your logon has been rejected. | The submitting software has not supplied a software package identifier in the logon request. | Please contact your solution supplier. |
+| 1035 | Your submission has been rejected. | The solution supplier associated with the submitting software is not linked to the service user you are submitting with, where the service user is designated as a Supplier Tester service user. | Please contact your sponsor. |
+| 1039 | Your submission has been rejected. | The submitting service user is not allowed to submit live submissions using this package. | Please contact your sponsor. |
+| 1040 | Your submission has been rejected. | The submitting service user is designated as a Supplier Tester service user, and as such cannot submit live submissions. | Please submit using a normal service user. |
+| 1050 | Your submission has been rejected. | There is an error in the structure of your submission. (The transmitted data does not consist of a complete submission.) | Please try retransmitting your Submission. Please contact your solution supplier. |
+| 1911 | Your submission has been rejected. | You have submitted a payment file that exceeds the allowed number of payment instructions (1.2 million). | Please resubmit the payment instructions in smaller payment files. |
 
 •  VOL1 Record Response Codes  
 Application Response Code	Description  
