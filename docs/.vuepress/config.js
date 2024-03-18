@@ -11,15 +11,18 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: 'https://irp.cdn-website.com/2b60cfa3/dms3rep/multi/ClearDebit+Logo+Light.svg',
 
-    navbar: ['/', /*'/mosaic-submit/README.md',*/ '/mosaic-managed/README.md', /*'/filemaker/README.md',*/ '/cdd-bureau/README.md'],
+    navbar: ['/', '/bacs-information.md', '/bacs-response-codes.md', /*'/mosaic-submit/README.md',*/ '/mosaic-managed/README.md', /*'/filemaker/README.md',*/ '/cdd-bureau/README.md'],
 	
 	sidebar: {
+		
+		'/bacs-information.md',
+		'/bacs-response-codes.md',
 	
-		/*'/mosaic-submit/': [
+		'/mosaic-submit/': [
 			{
 				text: 'Mosaic Submit'
 			},
-		],*/
+		],
 		
 		'/mosaic-managed/': [
 			{
