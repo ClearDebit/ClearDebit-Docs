@@ -15,8 +15,17 @@ export default defineUserConfig({
 	
 	sidebar: {
 		
-		'/bacs-information.md',
-		'/bacs-response-codes.md',
+		'/bacs-information.md': [
+			{
+				text: 'BACS Information'
+			},
+		],
+		
+		'/bacs-response-codes.md': [
+			{
+				text: 'BACS Response Codes'
+			},
+		],
 	
 		'/mosaic-submit/': [
 			{
