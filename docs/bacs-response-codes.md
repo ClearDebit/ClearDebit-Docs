@@ -12,9 +12,6 @@ The response codes are structured according to the main validation activities co
 
 ### BACSTEL-IP Logon & Submission XML Header Response Codes
 
-#### Application Response Codes
-
-
 | Response Code | Outcome | Details | Required Action |
 | ------------- | ------- | ------- | --------------- |
 | 1001 | Your submission has been rejected. | The last request/slice that BACS received was not the one expected. | Please contact your solution supplier. |
@@ -46,88 +43,44 @@ The response codes are structured according to the main validation activities co
 | 1050 | Your submission has been rejected. | There is an error in the structure of your submission. (The transmitted data does not consist of a complete submission.) | Please try retransmitting your Submission. Please contact your solution supplier. |
 | 1911 | Your submission has been rejected. | You have submitted a payment file that exceeds the allowed number of payment instructions (1.2 million). | Please resubmit the payment instructions in smaller payment files. |
 
-•  VOL1 Record Response Codes  
-Application Response Code	Description  
-1101 	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (BACS did not receive a valid VOL1 record as the first record of the first slice of your submission.)  
-Required action: 	 	Please contact your solution supplier. 
+### VOL1 Record Response Codes
+| Response Code | Outcome | Details | Required Action |
+| ------------- | ------- | ------- | --------------- |
+| 1101 | Your submission has been rejected. | There is an error in the structure of your submission. (BACS did not receive a valid VOL1 record as the first record of the first slice of your submission.) | Please contact your solution supplier. |
+| 1102 | Your submission has been rejected. | There is an error in the structure of your submission. (The service user number in the VOL1 record of your submission was not the same as the service user number your software included in the XML submission header.). | Please contact your solution supplier. |
+| 1103 | Your submission has been rejected. | There is an error in the structure of your submission. (The characters in positions 38 to 41 and 48 to 51 of the VOL1 record must be spaces.) | Please contact your solution supplier. |
 
-1102 	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (The service user number in the VOL1 record of your submission was not the same as the service user number your software included in the XML submission header.) .  
-Required action: 	 	Please contact your solution supplier. 
+### XML File Header Response Codes
+| Response Code | Outcome | Details | Required Action |
+| ------------- | ------- | ------- | --------------- |
+| 1201 | Your submission has been rejected. | There is an error in the structure of your submission. (A valid XML payment file header did not follow a VOL1 record.) | Please contact your solution supplier. |
+| 1202 | Your submission has been rejected. | There is an error in the structure of your submission. (This was a multi-file submission and a valid XML payment file header did not follow the UTL1 record.) | Please contact your solution supplier. |
+| 1203 | Your payment file has been rejected. | There has been an error in the validation of the signature of the payment file. (The signature was invalid.) | Please try re-signing and retransmitting the payment file and retransmit the payment file. If this problem persists please contact your solution supplier. |
+| 1204 | Your payment file has been rejected. | You are required to sign individual payment files, however, your payment file was not signed. | Please try retransmitting the payment file. Please note one of the following:  <br><ul><li>If you are signing the payment file and the problem persists, please contact your solution supplier; or</li><li>If you believe you do not require a payment file level signature, please contact your sponsor to discuss.</li></ul> |
+| 1205 | Your submission has been rejected. | There is an error in the structure of your submission. (The XML payment file header was invalid.) | Please contact your solution supplier. |
+| 1206 | Your submission has been rejected. | There is an error in the structure of your submission. (The XML payment file header sequence number was not numbered consecutively.) | Please contact your solution supplier. |
+| 1211 | Your payment file has been rejected. | The payment file has been signed by a contact who is not recognised by BACS. | Please ensure the payment file is signed by a recognised contact. If this problem persists, please contact your sponsor to discuss your profile for BACS Payment Services. |
+| 1212 | Your payment file has been rejected. | The payment file has been signed by a contact who is not associated with the originating service user. | Please ensure the payment file is signed by an associated contact. If this problem persists, please contact your sponsor to discuss your profile for BACS Payment Services. | 
 
-1103	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (The characters in positions 38 to 41 and 48 to 51 of the VOL1 record must be spaces.)  
-Required action: 	 	Please contact your solution supplier. 
+### HDR1 Record Response Codes
+| Response Code | Outcome | Details | Required Action |
+| ------------- | ------- | ------- | --------------- |
+| 1301 | Your submission has been rejected. | There is an error in the structure of your submission. (A valid HDR1 record did not follow an XML payment file header in your submission.) | Please contact your solution supplier. |
+| 1302 | Your submission has been rejected. | There is an error in the structure of your single file submission. (The service user number in the VOL1 record of your submission was not the same as the service user number your software included in the HDR1 record.) | Please contact your solution supplier. |
+| 1303 | Your submission has been rejected. | There is an error in the structure of your submission. (The file identifier in the HDR1 record was not equal to the file identifier in the XML payment file header.) | Please contact your solution supplier. |
+| 1304 | Your submission has been rejected. | There is an error in the structure of your submission. (The service user number in the HDR1 record was invalid.) | Please contact your solution supplier. |
 
-•  XML File Header Response Codes  
-Application Response Code	Description  
-1201 	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (A valid XML payment file header did not follow a VOL1 record.)  
-Required action: 	 	Please contact your solution supplier. 
+### HDR2 Record Response Codes
+| Response Code | Outcome | Details | Required Action |
+| ------------- | ------- | ------- | --------------- |
+| 1401 | Your submission has been rejected. | There is an error in the structure of your submission. (A valid HDR2 record did not follow a HDR1 record. | Please contact your solution supplier. |
 
-1202	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (This was a multi-file submission and a valid XML payment file header did not follow the UTL1 record.)  
-Required action: 	 	Please contact your solution supplier. 
+### Structural Response Codes
+| Response Code | Outcome | Details | Required Action |
+| ------------- | ------- | ------- | --------------- |
+| 1501 | Your submission has been rejected. | There is an error in the structure of your submission. (A valid UHL1 record did not follow a HDR2 record.) | Please contact your solution supplier. |
 
-1203	  	  	Your payment file has been rejected.  
-Details: 	 	There has been an error in the validation of the signature of the payment file. (The signature was invalid.)  
-Required action: 	 	Please try re-signing and retransmitting the payment file and retransmit the payment file. If this problem persists please contact your solution supplier. 
-
-1204	  	  	Your payment file has been rejected.  
-Details: 	 	You are required to sign individual payment files, however, your payment file was not signed.  
-Required action: 	 	Please try retransmitting the payment file. Please note one of the following:  
-•  If you are signing the payment file and the problem persists, please contact your solution supplier; or  
-•  If you believe you do not require a payment file level signature, please contact your sponsor to discuss. 
-
-1205	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (The XML payment file header was invalid.)  
-Required action: 	 	Please contact your solution supplier. 
-
-1206	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (The XML payment file header sequence number was not numbered consecutively.)  
-Required action: 	 	Please contact your solution supplier. 
-
-1211	  	  	Your payment file has been rejected.  
-Details: 	 	The payment file has been signed by a contact who is not recognised by BACS.  
-Required action: 	 	Please ensure the payment file is signed by a recognised contact. If this problem persists, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-1212	  	  	Your payment file has been rejected.  
-Details: 	 	The payment file has been signed by a contact who is not associated with the originating service user.  
-Required action: 	 	Please ensure the payment file is signed by an associated contact. If this problem persists, please contact your sponsor to discuss your profile for BACS Payment Services. 
-
-•  HDR1 Record Response Codes  
-Application Response Code	Description  
-1301 	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (A valid HDR1 record did not follow an XML payment file header in your submission.)  
-Required action: 	 	Please contact your solution supplier. 
-
-1302	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your single file submission. (The service user number in the VOL1 record of your submission was not the same as the service user number your software included in the HDR1 record.)  
-Required action: 	 	Please contact your solution supplier. 
-
-1303	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (The file identifier in the HDR1 record was not equal to the file identifier in the XML payment file header.)  
-Required action: 	 	Please contact your solution supplier. 
-
-1304	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (The service user number in the HDR1 record was invalid.)  
-Required action: 	 	Please contact your solution supplier. 
-
-•  HDR2 Record Response Codes  
-Application Response Code	Description  
-1401 	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (A valid HDR2 record did not follow a HDR1 record.)  
-Required action: 	 	Please contact your solution supplier. 
-
-•  Structural Response Codes  
-Application Response Code	Description  
-1501 	  	  	Your submission has been rejected.  
-Details: 	 	There is an error in the structure of your submission. (A valid UHL1 record did not follow a HDR2 record.)  
-Required action: 	 	Please contact your solution supplier. 
-
-•  Processing Day Response Codes  
-Application Response Code	Description  
+### Processing Day Response Codes   
 1502	  	  	Warning – A processing day in your submission will be overridden by BACS.  
 Details: 	 	There is an error in the structure of your submission (the UHL1 processing day was not in the correct format). The file will be processed on the current processing day.  
 Required action: 	 	If you have any concerns, please contact your sponsor. 
@@ -156,8 +109,7 @@ Required action: 	 	Please contact your solution supplier.
 Details: 	 	There is an error in the structure of your submission. (The file number in UHL1 must be numeric.)  
 Required action: 	 	Please contact your solution supplier. 
 
-•  Currency Code Response Codes  
-Application Response Code	Description  
+### Currency Code Response Codes  
 1551	  	  	For information.  
 Details: 	 	The payment file submitted is in euros.  
 Required action: 	 	No action required.
@@ -166,8 +118,7 @@ Required action: 	 	No action required.
 Details: 	 	The currency of a payment file submitted was not recognised. It will be processed as sterling.  
 Required action: 	 	If you have any concerns, please contact your sponsor. 
 
-•  Payment Item Structure Response Codes  
-Application Response Code	Description  
+### Payment Item Structure Response Codes  
 1901 	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in the structure of your submission. (A payment instruction in the submission contained an unrecognised transaction code.)  
 Required action: 	 	Please contact your solution supplier. 
@@ -180,8 +131,7 @@ Required action: 	 	Please contact your solution supplier.
 Details: 	 	There is an error in the structure of your submission. (No valid payment instructions were included for a particular day section or file.)  
 Required action: 	 	Please contact your solution supplier. 
 
-•  Standard Debit and Credit Response Codes  
-Application Response Code	Description  
+### Standard Debit and Credit Response Codes   
 1931 	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in the account details of a payment instruction. A destination sorting code was not all numeric.  
 Required action: 	 	Please check the details used. If correct details were used, there may be an error in the structure of your submission, in which case, contact your solution supplier. 
@@ -214,8 +164,7 @@ Required action: 	 	Please check the details used. If correct details were used,
 Details: 	 	There is an error in the account details of a Direct Debit instruction. A destination account number used was all zeroes.  
 Required action: 	 	Please check the details used. If correct details were used, there may be an error in the structure of your submission, in which case, contact your solution supplier. 
 
-•  Credit Card Specific Response Codes  
-Application Response Code	Description  
+### Credit Card Specific Response Codes  
 1939	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in a credit card record. The merchant number was not all numeric.  
 Required action: 	 	Please check the details used. If correct details were used, there may be an error in the structure of your submission, in which case, contact your solution supplier. 
@@ -232,8 +181,7 @@ Required action: 	 	Please check the cardholder number used was numeric. If it w
 Details: 	 	There is an error in the account details of an unapplied automated credit record. An originating account number was zero filled.  
 Required action: 	 	Please check the details used. If correct details were used, there may be an error in the structure of your submission, in which case, contact your solution supplier. 
 
-•  Contra Response Codes  
-Application Response Code	Description  
+### Contra Response Codes   
 1991 	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in the account details of a contra record. A destination sorting code was not all numeric.  
 Required action: 	 	Please check the details used. If correct details were used, there may be an error in the structure of your submission, in which case, contact your solution supplier. 
@@ -262,8 +210,7 @@ Required action: 	 	Please check the details used. If correct details were used,
 Details: 	 	There is an error in the value of a contra record. The value was not all numeric.  
 Required action: 	 	Please check the details used. If correct details were used, there may be an error in the structure of your submission, in which case, contact your solution supplier. . 
 
-•  Multi Processing Day Response Codes  
-Application Response Code	Description  
+### Multi Processing Day Response Codes  
 1912 	  	  	Warning – A processing day will be overridden by BACS.  
 Details: 	 	There is an error in the structure of your submission (a processing day in a payment instruction was not in the correct format). The affected payment instruction will be processed on the processing day of the payment file (the UHL1 date).  
 Required action: 	 	If you have any concerns, please contact your sponsor. 
@@ -284,8 +231,7 @@ Required action: 	 	If you have any concerns, please contact your sponsor.
 Details: 	 	The processing day of a payment instruction has already passed. The affected payment instruction will be processed on the processing day of the payment file (the UHL1 date).  
 Required action: 	 	If you have any concerns, please contact your sponsor. 
 
-•  Contra Processing Day Response Codes  
-Application Response Code	Description  
+### Contra Processing Day Response Codes  
 1982 	  	  	Warning – A processing day will be overridden by BACS.  
 Details: 	 	There is an error in the structure of your submission (a processing day in a contra record is not in the correct format). The contra record will be processed on the same processing day of the payment file (the UHL1 date).  
 Required action: 	 	If you have any concerns, please contact your sponsor. 
@@ -306,8 +252,7 @@ Required action: 	 	If you have any concerns, please contact your sponsor.
 Details: 	 	The processing day of a contra record has already passed. The affected contra will be processed on the same processing day of the payment file (the UHL1 date).  
 Required action: 	 	If you have any concerns, please contact your sponsor. 
 
-•  EOF1 Record Response Codes  
-Application Response Code	Description  
+### EOF1 Record Response Codes  
 1601 	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in the structure of your submission. (A valid payment instruction or EOF1 record does not follow a payment record.)  
 Required action: 	 	Please contact your solution supplier. 
@@ -320,14 +265,12 @@ Required action: 	 	Please contact your solution supplier.
 Details: 	 	There is an error in the structure of your submission. (A valid standing order recall record or EOF1 record does not follow a standing order recall record.)  
 Required action: 	 	Please contact your solution supplier. 
 
-•  EOF2 Record Response Codes  
-Application Response Code	Description  
+### EOF2 Record Response Codes  
 1701 	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in the structure of your submission. (A valid EOF2 record does not follow the EOF1 record.)  
 Required action: 	 	Please contact your solution supplier. 
 
-•  UTL1 Record Contra Response Codes  
-Application Response Code	Description  
+### UTL1 Record Contra Response Codes  
 1801 	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in the structure of your submission. (A valid UTL1 record does not follow the EOF2 record.)  
 Required action: 	 	Please contact your solution supplier.
@@ -356,8 +299,7 @@ Required action: 	 	Please contact your solution supplier.
 Details: 	 	There is an error in the structure of your submission. (The count of Direct Debit instruction records in UTL1 does not contain the correct count of Direct Debit instruction records since the preceding UHL1 record.)  
 Required action: 	 	Please contact your solution supplier.
 
-•  UTL1 Record Amount Response Codes  
-Application Response Code	Description  
+### UTL1 Record Amount Response Codes  
 1811 	  	  	Your submission has been rejected.  
 Details: 	 	There is an error in the structure of your submission. (The monetary total of credit payment instructions in UTL1 is not numeric.)  
 Required action: 	 	Please contact your solution supplier.
