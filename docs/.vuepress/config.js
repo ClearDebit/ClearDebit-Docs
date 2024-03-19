@@ -51,6 +51,12 @@ export default defineUserConfig({
 								'/mosaic-managed/releases/2342.md'
 							]
 						}
+					]},
+					{
+						text: 'Knowledgebase',
+						children: [
+							'/mosaic-managed/knowledge-base/enabling-fetchify-within-mandate-managed.md'
+						]
 					]}
 				]
 			},
