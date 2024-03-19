@@ -55,7 +55,7 @@ export default defineUserConfig({
 					{
 						text: 'Knowledgebase',
 						children: [
-							'/mosaic-managed/knowledge-base/enabling-fetchify-within-mandate-managed.md'
+							'/mosaic-managed/knowledge-base/enabling-fetchify-within-mosaic-managed.md'
 						]
 					}
 				]
