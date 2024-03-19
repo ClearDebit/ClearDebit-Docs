@@ -1,6 +1,9 @@
 ---
 title: "Creating a New Account (Paper)"
 ---
+
+# Creating a New Account (Paper)
+
 In order to collect a direct debit from a customer, the customer’s details need to be stored in Mandate Express. This is called an account.
 
 To create an account, click ‘New Account' on the main screen or select 'New Account' from the File menu or click 'Create New Account' on the Account Viewer. The following screen will be displayed.

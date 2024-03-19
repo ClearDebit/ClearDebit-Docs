@@ -11,21 +11,9 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: 'https://irp.cdn-website.com/2b60cfa3/dms3rep/multi/ClearDebit+Logo+Light.svg',
 
-    navbar: ['/', '/bacs-information.md', '/bacs-response-codes.md', /*'/mosaic-submit/README.md',*/ '/mosaic-managed/README.md', /*'/filemaker/README.md',*/ '/cdd-bureau/README.md'],
+    navbar: ['/', /*'/mosaic-submit/README.md',*/ '/mosaic-managed/README.md', /*'/filemaker/README.md',*/ '/cdd-bureau/README.md'],
 	
 	sidebar: {
-		
-		'/bacs-information.md': [
-			{
-				text: 'BACS Information'
-			},
-		],
-		
-		'/bacs-response-codes.md': [
-			{
-				text: 'BACS Response Codes'
-			},
-		],
 	
 		'/mosaic-submit/': [
 			{
@@ -38,33 +26,36 @@ export default defineUserConfig({
 				text: 'Mosaic Managed',
 				children: [
 					{
-						'/mosaic-managed/user-guide.md': [
-						{
-							text: 'User Guide',
-							children: [
-								'/mosaic-managed/user-guide/creating-a-new-account-paper.md'
-							]
-						}
-					]},
+						text: 'User Guide',
+						link: '/mosaic-managed/user-guide.md',
+						children: [
+							'/mosaic-managed/user-guide/creating-a-new-account-paper.md'
+						]
+					},
 					'/mosaic-managed/installation-guide.md',
 					'/mosaic-managed/faqs.md',
-					'/mosaic-managed/releases.md',
+					
 					{
-						'/mosaic-managed/releases.md': [
-						{
-							text: 'Releases',
-							children: [
-								'/mosaic-managed/releases/242.md',
-								'/mosaic-managed/releases/2344.md',
-								'/mosaic-managed/releases/2342.md'
-							]
-						}
-					]},
+						text: 'Releases',
+						link: '/mosaic-managed/releases.md',
+						children: [
+							'/mosaic-managed/releases/242.md',
+							'/mosaic-managed/releases/2344.md',
+							'/mosaic-managed/releases/2342.md'
+						]
+					},
 					{
 						text: 'Knowledgebase',
-						collapsable: true,
 						children: [
 							'/mosaic-managed/knowledge-base/enabling-fetchify-within-mosaic-managed.md'
+						]
+					},
+					
+					{
+						text: 'BACS Information',
+						children: [
+							'/bacs-information.md',
+							'/bacs-response-codes.md'
 						]
 					}
 				]
@@ -81,8 +72,21 @@ export default defineUserConfig({
 			{
 				text: 'ClearDebit Bureau',
 				children: [
-					'/cdd-bureau/api-documentation.md',
-					'/cdd-bureau/sftp-documentation.md'
+					{
+						text: 'Bureau Integration',
+						children: [
+							'/cdd-bureau/api-documentation.md',
+							'/cdd-bureau/sftp-documentation.md'
+						]
+					},
+					
+					{
+						text: 'BACS Information',
+						children: [
+							'/bacs-information.md',
+							'/bacs-response-codes.md'
+						]
+					}
 				]
 			},
 		],
