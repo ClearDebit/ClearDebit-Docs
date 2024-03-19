@@ -57,7 +57,7 @@ export default defineUserConfig({
 						children: [
 							'/mosaic-managed/knowledge-base/enabling-fetchify-within-mandate-managed.md'
 						]
-					]}
+					}
 				]
 			},
 		],
