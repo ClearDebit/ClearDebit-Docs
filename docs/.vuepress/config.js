@@ -37,7 +37,15 @@ export default defineUserConfig({
 			{
 				text: 'Mosaic Managed',
 				children: [
-					'/mosaic-managed/user-guide.md',
+					{
+						'/mosaic-managed/user-guide.md': [
+						{
+							text: 'User Guide',
+							children: [
+								'/mosaic-managed/user-guide/creating-a-new-account-paper.md'
+							]
+						}
+					]},
 					'/mosaic-managed/installation-guide.md',
 					'/mosaic-managed/faqs.md',
 					'/mosaic-managed/releases.md',
@@ -54,6 +62,7 @@ export default defineUserConfig({
 					]},
 					{
 						text: 'Knowledgebase',
+						collapsable: true,
 						children: [
 							'/mosaic-managed/knowledge-base/enabling-fetchify-within-mosaic-managed.md'
 						]
