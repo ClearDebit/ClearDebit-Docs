@@ -39,6 +39,7 @@ export default defineUserConfig({
 						text: 'Releases',
 						link: '/mosaic-managed/releases.md',
 						children: [
+							'/mosaic-managed/releases/244.md',
 							'/mosaic-managed/releases/242.md',
 							'/mosaic-managed/releases/2344.md',
 							'/mosaic-managed/releases/2342.md'
