@@ -5,7 +5,7 @@ title: "API Documentation"
 
 ## General Information
 
-The API is hosted at [https://api.cleardirectdebit.co.uk/gateway.php](https://api.cleardirectdebit.co.uk/gateway.php])
+The API is hosted at [https://api.cleardirectdebit.co.uk/gateway.php](https://api.cleardirectdebit.co.uk/gateway.php)
 
 All Requests to the API should be sent using https encryption. Un-encrypted (http based) requests will be rejected. 
 
